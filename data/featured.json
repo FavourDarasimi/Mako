@@ -16,6 +16,14 @@
     "tags": ["Best Seller", "Lunch"]
   },
   {
+    "id": 994,
+    "name": "Wild Mushroom & Chicken Alfredo",
+    "description": "Fettuccine pasta tossed in a luxurious parmesan cream sauce with grilled chicken breast and earthy sliced mushrooms.",
+    "price": 19.5,
+    "image": "/dishes/food_27.png",
+    "tags": ["Comfort Food", "Creamy"]
+  },
+  {
     "id": 993,
     "name": "Mango Passion Cheesecake",
     "description": "A stunning dessert finale: Creamy mousse cheesecake topped with a vibrant mango-passion fruit glaze and edible flowers.",

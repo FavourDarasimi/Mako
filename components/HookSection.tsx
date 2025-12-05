@@ -22,9 +22,9 @@ const features = [
   },
 ];
 
-export default function HooksSection() {
+const HooksSection = () => {
   return (
-    <section className="mt-20">
+    <section className="my-24">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold  mb-4">
@@ -60,4 +60,6 @@ export default function HooksSection() {
       </div>
     </section>
   );
-}
+};
+
+export default HooksSection;

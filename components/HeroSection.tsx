@@ -4,6 +4,7 @@ import hero_section from "@/public/images/hero-section.webp";
 import img1 from "@/public/images/img1.webp";
 import img2 from "@/public/images/img2.webp";
 import { LuChefHat } from "react-icons/lu";
+
 const HeroSection = () => {
   return (
     <div className="flex items-stretch h-full gap-10 flex-1 mt-5">
@@ -21,20 +22,17 @@ const HeroSection = () => {
           <div className="absolute w-48 h-48 border border-orange-500/40 rounded-full animate-ripple delay-2600"></div>
         </div>
         <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-          <div className="absolute w-48 h-48 border border-orange-500/40 rounded-full animate-ripple"></div>
+          <div className="absolute w-32 h-32 border border-orange-500/40 rounded-full animate-ripple"></div>
 
-          <div className="absolute w-48 h-48 border border-orange-500/40 rounded-full animate-ripple delay-1300"></div>
+          <div className="absolute w-32 h-32 border border-orange-500/40 rounded-full animate-ripple delay-1300"></div>
 
-          <div className="absolute w-48 h-48 border border-orange-500/40 rounded-full animate-ripple delay-2600"></div>
+          <div className="absolute w-32 h-32 border border-orange-500/40 rounded-full animate-ripple delay-2600"></div>
         </div>
-        <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-          <div className="absolute w-48 h-48 border border-orange-500/40 rounded-full animate-ripple"></div>
-
-          <div className="absolute w-48 h-48 border border-orange-500/40 rounded-full animate-ripple delay-1300"></div>
-
-          <div className="absolute w-48 h-48 border border-orange-500/40 rounded-full animate-ripple delay-2600"></div>
-        </div>
-        <Image src={img1} alt="" className="rotate-10 w-[150px] rounded-lg" />
+        <Image
+          src={img1}
+          alt=""
+          className="rotate-12 w-[150px] rounded-lg hover:-rotate-12 transition duration-500"
+        />
         <div className="space-y-7">
           <LuChefHat className="w-8 h-8 text-[#e05d44]" />
           <h1 className="text-6xl max-w-2xl">Experience the Taste of Mako.</h1>
@@ -54,7 +52,7 @@ const HeroSection = () => {
           <Image
             src={img2}
             alt=""
-            className="-rotate-10 w-[150px] rounded-lg "
+            className="-rotate-12 w-[150px] rounded-lg hover:rotate-12 transition duration-500 ease-in-out"
           />
         </div>
       </div>
