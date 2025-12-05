@@ -1,0 +1,54 @@
+[
+  {
+    "category": "Handhelds",
+    "items": [
+      {
+        "id": 1001,
+        "name": "The Saigon Banh Mi",
+        "description": "Crusty baguette with pork pâté, cold cuts, pickled daikon, and cilantro.",
+        "price": 9.5,
+        "image": "/dishes/food_16.png"
+      },
+      {
+        "id": 1002,
+        "name": "Bombay Chicken Roll",
+        "description": "Roasted chicken and onions wrapped in a flaky paratha flatbread.",
+        "price": 8.0,
+        "image": "/dishes/food_6.png"
+      },
+      {
+        "id": 1003,
+        "name": "Spicy Chicken Frankie",
+        "description": "Street-style wrap with egg layer, shredded chicken, and chili sauce.",
+        "price": 8.5,
+        "image": "/dishes/food_7.png"
+      }
+    ]
+  },
+  {
+    "category": "Comfort Bowls",
+    "items": [
+      {
+        "id": 1101,
+        "name": "Mac & Ham Bake",
+        "description": "Cheesy rigatoni pasta baked with savory ham chunks.",
+        "price": 10.0,
+        "image": "/dishes/food_25.png"
+      },
+      {
+        "id": 1102,
+        "name": "Spaghetti Pomodoro",
+        "description": "Classic spaghetti noodles tossed in a simple, fresh tomato sauce.",
+        "price": 9.0,
+        "image": "/dishes/food_30.png"
+      },
+      {
+        "id": 1103,
+        "name": "Raspberry Gelato Cup",
+        "description": "Creamy raspberry gelato served with fresh berries.",
+        "price": 5.0,
+        "image": "/dishes/food_9.png"
+      }
+    ]
+  }
+]

@@ -3,19 +3,19 @@ import { GiChefToque } from "react-icons/gi";
 
 const features = [
   {
-    icon: <FaLeaf className="w-8 h-8 text-amber-500" />,
+    icon: <FaLeaf className="w-8 h-8 text-[#e05d44]" />,
     title: "Fresh Ingredients",
     description:
       "Farm-to-table freshness in every bite. We source locally to ensure the highest quality.",
   },
   {
-    icon: <GiChefToque className="w-8 h-8 text-amber-500" />,
+    icon: <GiChefToque className="w-8 h-8 text-[#e05d44]" />,
     title: "Expert Chefs",
     description:
-      "Curated by Chef Dara with 10 years of culinary excellence in modern fusion cuisine.",
+      "Curated by Chef Jake with 10 years of culinary excellence in modern fusion cuisine.",
   },
   {
-    icon: <FaCouch className="w-8 h-8 text-amber-500" />,
+    icon: <FaCouch className="w-8 h-8 text-[#e05d44]" />,
     title: "Cozy Ambiance",
     description:
       "The perfect spot for romantic dates, family dinners, and quiet coffee breaks.",
@@ -24,37 +24,34 @@ const features = [
 
 export default function HooksSection() {
   return (
-    // Background: Dark Slate (Slate-900)
-    <section className="py-20 bg-slate-900">
+    <section className="mt-20">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold  mb-4">
             Why Choose Mako?
-          </h2>
-          {/* Decorative underline */}
-          <div className="w-20 h-1 bg-amber-500 mx-auto rounded"></div>
+          </h2>{" "}
+          <div className="w-20 h-1 bg-[#e05d44] mx-auto rounded"></div>
         </div>
 
-        {/* The 3 Columns Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-slate-800 p-8 rounded-2xl text-center border border-slate-700 hover:border-amber-500 transition-colors duration-300"
+              className="group relative overflow-hidden p-8 rounded-2xl text-center border border-[#c3c3c3] transition-all duration-700 cursor-pointer hover:rotate-10"
             >
-              {/* Icon Circle */}
-              <div className="flex justify-center mb-6">
-                <div className="p-4 bg-slate-900 rounded-full border border-slate-600 shadow-lg">
+              <div className="absolute inset-0 bg-[#e05d44] origin-left scale-x-0 transition-transform duration-700 ease-out group-hover:scale-x-100" />
+
+              <div className="relative z-10 flex justify-center mb-6">
+                <div className="p-4 bg-[#fffbf0] rounded-full shadow-lg transition-colors group-hover:bg-white">
                   {feature.icon}
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-3">
+              <h3 className="relative z-10 text-xl font-bold mb-3 transition-colors group-hover:text-white">
                 {feature.title}
               </h3>
 
-              <p className="text-slate-400 leading-relaxed text-sm">
+              <p className="relative z-10 text-slate-500 leading-relaxed text-[16px] transition-colors group-hover:text-white/90">
                 {feature.description}
               </p>
             </div>

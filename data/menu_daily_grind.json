@@ -1,0 +1,80 @@
+[
+  {
+    "category": "Fresh Greens & Bowls",
+    "items": [
+      {
+        "id": 701,
+        "name": "Heirloom Caesar Salad",
+        "description": "Romaine hearts, artisan croutons, and yellow cherry tomatoes with caesar dressing.",
+        "price": 13.0,
+        "image": "/dishes/food_23.png"
+      },
+      {
+        "id": 702,
+        "name": "Roasted Cauliflower Bowl",
+        "description": "Spiced cauliflower, chickpeas, and parsley with a tahini dressing.",
+        "price": 12.5,
+        "image": "/dishes/food_22.png"
+      },
+      {
+        "id": 703,
+        "name": "Vegetable Breakfast Bowl",
+        "description": "Rice stir-fried with zucchini and leeks, served with soft-boiled eggs.",
+        "price": 11.0,
+        "image": "/dishes/food_24.png"
+      }
+    ]
+  },
+  {
+    "category": "Signature Sandwiches",
+    "items": [
+      {
+        "id": 801,
+        "name": "Roast Beef Deluxe",
+        "description": "Thinly sliced roast beef with horseradish mayo on toasted sourdough.",
+        "price": 15.0,
+        "image": "/dishes/food_13.png"
+      },
+      {
+        "id": 802,
+        "name": "Garden Chickpea Smash",
+        "description": "Smashed chickpea salad with cucumber and red onion on seeded bread.",
+        "price": 11.5,
+        "image": "/dishes/food_15.png"
+      },
+      {
+        "id": 803,
+        "name": "Low-Carb Club BLT",
+        "description": "Bacon, lettuce, and tomato sandwich on keto-friendly bread.",
+        "price": 12.0,
+        "image": "/dishes/food_14.png"
+      }
+    ]
+  },
+  {
+    "category": "Bakery & Sweets",
+    "items": [
+      {
+        "id": 901,
+        "name": "White Berry Layer Cake",
+        "description": "Frosted white cake topped with fresh blackberries and blueberries.",
+        "price": 6.5,
+        "image": "/dishes/food_19.png"
+      },
+      {
+        "id": 902,
+        "name": "Celebration Cupcake",
+        "description": "Vanilla sponge with pink buttercream and a cherry on top.",
+        "price": 4.0,
+        "image": "/dishes/food_17.png"
+      },
+      {
+        "id": 903,
+        "name": "The Sprinkle Bowl",
+        "description": "Vanilla ice cream served in an edible white chocolate and sprinkle bowl.",
+        "price": 7.5,
+        "image": "/dishes/food_12.png"
+      }
+    ]
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    "category": "Starters",
+    "items": [
+      {
+        "id": 101,
+        "name": "Bombay Chicken Kathi Roll",
+        "description": "Spiced roasted chicken wrapped in warm paratha bread with pickled onions.",
+        "price": 12.0,
+        "image": "/dishes/food_6.png"
+      },
+      {
+        "id": 102,
+        "name": "Asparagus & Cured Yolk",
+        "description": "Fresh green asparagus with salt-cured egg yolk and vinaigrette.",
+        "price": 14.5,
+        "image": "/dishes/food_1.png"
+      },
+      {
+        "id": 103,
+        "name": "Stuffed Roasted Eggplant",
+        "description": "Oven-roasted eggplant topped with couscous, yogurt, and pomegranate seeds.",
+        "price": 13.0,
+        "image": "/dishes/food_21.png"
+      }
+    ]
+  },
+  {
+    "category": "Mains",
+    "items": [
+      {
+        "id": 201,
+        "name": "Hanoi Pork Noodle Soup",
+        "description": "Traditional broth with rice vermicelli, tender pork, and fresh herbs.",
+        "price": 18.0,
+        "image": "/dishes/food_32.png"
+      },
+      {
+        "id": 202,
+        "name": "Seafood Marinara",
+        "description": "Spaghetti tossed in white wine tomato sauce with prawns and calamari.",
+        "price": 24.0,
+        "image": "/dishes/food_31.png"
+      },
+      {
+        "id": 203,
+        "name": "Chicken Parmesan Braid",
+        "description": "Golden pastry filled with marinara, mozzarella, and breaded chicken.",
+        "price": 20.0,
+        "image": "/dishes/food_8.png"
+      }
+    ]
+  },
+  {
+    "category": "Desserts",
+    "items": [
+      {
+        "id": 301,
+        "name": "Mango Passion Cheesecake",
+        "description": "Creamy cheesecake topped with a tropical mango glaze.",
+        "price": 9.0,
+        "image": "/dishes/food_20.png"
+      },
+      {
+        "id": 302,
+        "name": "Deconstructed Meringue",
+        "description": "Crisp meringue shards served with fruit gel and sorbet.",
+        "price": 11.0,
+        "image": "/dishes/food_10.png"
+      }
+    ]
+  }
+]
