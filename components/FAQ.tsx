@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 const FAQ = () => {
   const faqs = [
@@ -51,68 +52,210 @@ const FAQ = () => {
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: -20 } as const,
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    } as const,
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 } as const,
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    } as const,
+  };
+
+  const answerVariants = {
+    hidden: {
+      opacity: 0,
+      height: 0,
+      y: -10,
+    } as const,
+    visible: {
+      opacity: 1,
+      height: "auto",
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
+      },
+    } as const,
+    exit: {
+      opacity: 0,
+      height: 0,
+      y: -10,
+      transition: {
+        duration: 0.2,
+        ease: "easeIn",
+      },
+    } as const,
+  };
+
   return (
-    <div className="max-w-4xl mx-auto mt-10">
-      <div className="text-center mb-12">
-        <div className="flex items-center justify-center gap-2 mb-4">
-          <span className="h-px w-12 bg-[#e05d44]"></span>
-          <span className="text-[#e05d44] font-bold uppercase tracking-widest text-sm">
+    <div className="max-w-4xl mx-auto mt-8 sm:mt-10 lg:mt-12 px-4 sm:px-6">
+      {/* Header Section */}
+      <motion.div
+        className="text-center mb-8 sm:mb-10 lg:mb-12"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={headerVariants}
+      >
+        <motion.div
+          className="flex items-center justify-center gap-2 mb-3 sm:mb-4"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <span className="h-px w-8 sm:w-10 md:w-12 bg-[#e05d44]"></span>
+          <span className="text-[#e05d44] font-bold uppercase tracking-widest text-xs sm:text-sm">
             FAQ
           </span>
-          <span className="h-px w-12 bg-[#e05d44]"></span>
-        </div>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <span className="h-px w-8 sm:w-10 md:w-12 bg-[#e05d44]"></span>
+        </motion.div>
+        <motion.h2
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 px-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
           Frequently Asked Questions
-        </h2>
-        <p className="text-gray-600">
+        </motion.h2>
+        <motion.p
+          className="text-sm sm:text-base text-gray-600 px-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           Find answers to common questions about dining at Mako
-        </p>
-      </div>
-      <div className="space-y-4">
+        </motion.p>
+      </motion.div>
+
+      {/* FAQ Items */}
+      <motion.div
+        className="space-y-3 sm:space-y-4"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={containerVariants}
+      >
         {faqs.map((faq, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-[#e05d44]/50 transition-all shadow-sm"
+            className="bg-white rounded-xl sm:rounded-2xl border border-gray-200 overflow-hidden hover:border-[#e05d44]/50 transition-colors shadow-sm hover:shadow-md"
+            variants={itemVariants}
+            whileHover={{ scale: 1.01 }}
+            transition={{ type: "spring", stiffness: 300 }}
           >
-            <button
+            <motion.button
               onClick={() => toggleFAQ(index)}
-              className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
+              className="w-full px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between text-left focus:outline-none focus:ring-2 focus:ring-[#e05d44]/20 touch-manipulation active:bg-gray-50"
+              aria-expanded={openFAQ === index}
+              aria-controls={`faq-answer-${index}`}
+              whileTap={{ scale: 0.99 }}
             >
-              <h3 className="text-lg font-bold text-gray-900 pr-4">
+              <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900 pr-3 sm:pr-4 leading-tight">
                 {faq.question}
               </h3>
-              <FaChevronDown
-                className={`text-[#e05d44] text-xl shrink-0 transition-transform duration-300 ${
-                  openFAQ === index ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-            <div
-              className={`overflow-hidden transition-all duration-300 ${
-                openFAQ === index ? "max-h-96" : "max-h-0"
-              }`}
-            >
-              <div className="px-6 pb-5 pt-2">
-                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-              </div>
-            </div>
-          </div>
+              <motion.div
+                animate={{ rotate: openFAQ === index ? 180 : 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                <FaChevronDown className="text-[#e05d44] text-base sm:text-lg md:text-xl shrink-0" />
+              </motion.div>
+            </motion.button>
+
+            <AnimatePresence initial={false}>
+              {openFAQ === index && (
+                <motion.div
+                  id={`faq-answer-${index}`}
+                  variants={answerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
+                  <div className="px-4 sm:px-6 pb-4 sm:pb-5 pt-1 sm:pt-2">
+                    <motion.p
+                      className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.3, delay: 0.1 }}
+                    >
+                      {faq.answer}
+                    </motion.p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
         ))}
-      </div>
-      <div className="mt-12 bg-linear-to-r from-[#e05d44]/10 to-orange-50 rounded-2xl border border-[#e05d44]/30 p-8 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-3">
+      </motion.div>
+
+      {/* Contact CTA */}
+      <motion.div
+        className="mt-8 sm:mt-10 lg:mt-12 bg-linear-to-r from-[#e05d44]/10 to-orange-50 rounded-xl sm:rounded-2xl border border-[#e05d44]/30 p-5 sm:p-6 lg:p-8 text-center"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        <motion.h3
+          className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
           Still have questions?
-        </h3>
-        <p className="text-gray-600 mb-6">
+        </motion.h3>
+        <motion.p
+          className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 px-4"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
           Can't find the answer you're looking for? Our team is here to help.
-        </p>
-        <a
+        </motion.p>
+        <motion.a
           href="tel:+2341234567890"
-          className="inline-block bg-[#e05d44] hover:scale-105 duration-300 py-3 px-8 rounded-lg text-white font-bold"
+          className="inline-block bg-[#e05d44] hover:bg-[#c94d34] duration-300 py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg text-white font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all touch-manipulation"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
           Call Us Now
-        </a>
-      </div>
+        </motion.a>
+      </motion.div>
     </div>
   );
 };
