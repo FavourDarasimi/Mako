@@ -27,7 +27,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="">
+    <section className="mb-7">
       <div className="  mx-32 px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -75,7 +75,7 @@ const Testimonials = () => {
                   </div>
 
                   {/* Stars */}
-                  <div className="flex gap-[2px] text-yellow-500">
+                  <div className="flex gap-0.5 text-yellow-500">
                     {[...Array(5)].map((_, i) => (
                       <FaStar
                         key={i}

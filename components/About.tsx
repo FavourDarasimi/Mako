@@ -6,15 +6,10 @@ import Image from "next/image";
 const AboutSection = () => {
   return (
     <section className="relative overflow-hidden">
-      {/* Background decoration (optional subtle glow) */}
-
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* LEFT SIDE: Image Collage */}
           <div className="relative">
-            {/* Main Image */}
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
-              {/* Replace with a picture of the restaurant interior */}
               <Image
                 src={interior}
                 alt="Mako Interior"
@@ -22,9 +17,7 @@ const AboutSection = () => {
               />
             </div>
 
-            {/* Overlapping Small Image (The Chef or Plating) */}
             <div className="absolute -bottom-10 -right-10 z-20 w-48 md:w-64  rounded-2xl overflow-hidden shadow-2xl">
-              {/* Replace with Chef's portrait or a dish closeup */}
               <Image
                 src={img2}
                 alt="Chef Plating"
@@ -32,11 +25,9 @@ const AboutSection = () => {
               />
             </div>
 
-            {/* Decorative Square behind images */}
             <div className="absolute -top-4 -left-4 w-24 h-24 border-2 border-[#e05d44]/30 rounded-lg z-0"></div>
           </div>
 
-          {/* RIGHT SIDE: The Story */}
           <div>
             <div className="flex items-center gap-2 mb-4">
               <span className="h-px w-12 bg-[#e05d44]"></span>
@@ -65,7 +56,6 @@ const AboutSection = () => {
               Burger, every dish tells a story of passion and precision.
             </p>
 
-            {/* Checklist of Features */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {[
                 "Fresh, Organic Ingredients",
@@ -74,7 +64,7 @@ const AboutSection = () => {
                 "Award-Winning Wine List",
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-[#e05d44] flex-shrink-0" />
+                  <FaCheckCircle className="text-[#e05d44] shrink-0" />
                   <span className="text-slate-500 text-sm font-medium">
                     {item}
                   </span>
@@ -82,7 +72,6 @@ const AboutSection = () => {
               ))}
             </div>
 
-            {/* Signature Block */}
             <div className="border-l-4 border-[#e05d44] pl-6 py-2">
               <p className="text-xl font-serif italic text-slate-500 mb-1">
                 "Food is not just fuel, it is a language of love."
