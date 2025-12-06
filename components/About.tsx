@@ -5,9 +5,8 @@ import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <section className="my-24  relative overflow-hidden">
+    <section className="relative overflow-hidden">
       {/* Background decoration (optional subtle glow) */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-[#e05d44]/5 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

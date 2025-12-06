@@ -27,7 +27,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="my-24 ">
+    <section className="">
       <div className="  mx-32 px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">

@@ -1,0 +1,316 @@
+[
+  {
+    "menu": "Starters",
+    "items": [
+      {
+        "id": 401,
+        "name": "Grilled Halloumi Caprese",
+        "description": "Seared Halloumi cheese served with heirloom tomatoes and olives.",
+        "price": 11.0,
+        "image": "/dishes/food_4.png",
+        "tags": ["Vegetarian", "Mediterranean", "Light"],
+        "featured": false
+      },
+      {
+        "id": 102,
+        "name": "Asparagus & Cured Yolk",
+        "description": "Fresh green asparagus with salt-cured egg yolk and vinaigrette.",
+        "price": 14.5,
+        "image": "/dishes/food_1.png",
+        "tags": ["Vegetarian", "Healthy", "Seasonal"],
+        "featured": false
+      },
+      {
+        "id": 103,
+        "name": "Stuffed Roasted Eggplant",
+        "description": "Oven-roasted eggplant topped with couscous, yogurt, and pomegranate seeds.",
+        "price": 13.0,
+        "image": "/dishes/food_21.png",
+        "tags": ["Vegetarian", "Healthy", "Roasted"],
+        "featured": false
+      },
+      {
+        "id": 701,
+        "name": "Heirloom Caesar Salad",
+        "description": "Romaine hearts, artisan croutons, and yellow cherry tomatoes with caesar dressing.",
+        "price": 13.0,
+        "image": "/dishes/food_23.png",
+        "tags": ["Salad", "Fresh", "Classic"],
+        "featured": false
+      },
+      {
+        "id": 402,
+        "name": "Radicchio & Walnut Salad",
+        "description": "Bitter greens balanced with sweet walnuts and gorgonzola cheese.",
+        "price": 12.0,
+        "image": "/dishes/food_3.png",
+        "tags": ["Vegetarian", "Healthy", "Nutty"],
+        "featured": false
+      },
+      {
+        "id": 702,
+        "name": "Roasted Cauliflower Bowl",
+        "description": "Spiced cauliflower, chickpeas, and parsley with a tahini dressing.",
+        "price": 12.5,
+        "image": "/dishes/food_22.png",
+        "tags": ["Vegan", "Healthy", "Bowl"],
+        "featured": false
+      }
+    ]
+  },
+
+  {
+    "menu": "Bowls",
+    "items": [
+      {
+        "id": 703,
+        "name": "Vegetable Breakfast Bowl",
+        "description": "Rice stir-fried with zucchini and leeks, served with soft-boiled eggs.",
+        "price": 11.0,
+        "image": "/dishes/food_24.png",
+        "tags": ["Vegetarian", "Comfort Food", "Breakfast"],
+        "featured": false
+      }
+    ]
+  },
+
+  {
+    "menu": "Pasta",
+    "items": [
+      {
+        "id": 504,
+        "name": "Burrata & Prosciutto",
+        "description": "Spaghetti nest topped with a whole fresh burrata cheese and cured ham.",
+        "price": 22.0,
+        "image": "/dishes/food_29.png",
+        "tags": ["Italian", "Cheesy", "Premium"],
+        "featured": false
+      },
+      {
+        "id": 202,
+        "name": "Seafood Marinara",
+        "description": "Spaghetti tossed in white wine tomato sauce with prawns and calamari.",
+        "price": 24.0,
+        "image": "/dishes/food_31.png",
+        "tags": ["Seafood", "Italian", "Premium"],
+        "featured": true
+      },
+      {
+        "id": 501,
+        "name": "Tuscan Creamy Chicken",
+        "description": "Linguine in a sun-dried tomato cream sauce with spinach and grilled chicken.",
+        "price": 19.0,
+        "image": "/dishes/food_28.png",
+        "tags": ["Creamy", "Chicken", "Comfort Food"],
+        "featured": false
+      },
+      {
+        "id": 502,
+        "name": "Spinach & Ricotta Rotolo",
+        "description": "Rolled lasagna sheets filled with ricotta cheese and spinach, baked in marinara.",
+        "price": 18.0,
+        "image": "/dishes/food_5.png",
+        "tags": ["Vegetarian", "Cheesy", "Baked"],
+        "featured": false
+      },
+      {
+        "id": 503,
+        "name": "Wild Mushroom Alfredo",
+        "description": "Fettuccine tossed in a rich parmesan cream sauce with earthy mushrooms.",
+        "price": 17.5,
+        "image": "/dishes/food_27.png",
+        "tags": ["Vegetarian", "Creamy", "Mushroom"],
+        "featured": true
+      },
+      {
+        "id": 1101,
+        "name": "Mac & Ham Bake",
+        "description": "Cheesy rigatoni pasta baked with savory ham chunks.",
+        "price": 10.0,
+        "image": "/dishes/food_25.png",
+        "tags": ["Cheesy", "Comfort Food", "Baked"],
+        "featured": false
+      },
+      {
+        "id": 403,
+        "name": "Tomato Olive Fusilli",
+        "description": "Spiral pasta tossed in a light red sauce with cherry tomatoes and olives.",
+        "price": 10.0,
+        "image": "/dishes/food_26.png",
+        "tags": ["Vegetarian", "Italian", "Light"],
+        "featured": false
+      },
+      {
+        "id": 1102,
+        "name": "Spaghetti Pomodoro",
+        "description": "Classic spaghetti noodles tossed in a simple, fresh tomato sauce.",
+        "price": 9.0,
+        "image": "/dishes/food_30.png",
+        "tags": ["Vegetarian", "Italian", "Classic"],
+        "featured": false
+      }
+    ]
+  },
+
+  {
+    "menu": "Global Mains",
+    "items": [
+      {
+        "id": 201,
+        "name": "Hanoi Pork Noodle Soup",
+        "description": "Traditional broth with rice vermicelli, tender pork, and fresh herbs.",
+        "price": 18.0,
+        "image": "/dishes/food_32.png",
+        "tags": ["Asian", "Soup", "Pork"],
+        "featured": false
+      },
+      {
+        "id": 203,
+        "name": "Chicken Parmesan Braid",
+        "description": "Golden pastry filled with marinara, mozzarella, and breaded chicken.",
+        "price": 20.0,
+        "image": "/dishes/food_8.png",
+        "tags": ["Italian Fusion", "Baked", "Chicken"],
+        "featured": false
+      }
+    ]
+  },
+
+  {
+    "menu": "Sandwiches & Wraps",
+    "items": [
+      {
+        "id": 801,
+        "name": "Roast Beef Deluxe",
+        "description": "Thinly sliced roast beef with horseradish mayo on toasted sourdough.",
+        "price": 15.0,
+        "image": "/dishes/food_13.png",
+        "tags": ["Beef", "Sandwich", "Premium"],
+        "featured": false
+      },
+      {
+        "id": 1001,
+        "name": "The Saigon Banh Mi",
+        "description": "Crusty baguette with pork pâté, cold cuts, pickled daikon, and cilantro.",
+        "price": 9.5,
+        "image": "/dishes/food_16.png",
+        "tags": ["Vietnamese", "Street Food", "Pork"],
+        "featured": true
+      },
+      {
+        "id": 101,
+        "name": "Bombay Chicken Kathi Roll",
+        "description": "Spiced roasted chicken wrapped in warm paratha bread with pickled onions.",
+        "price": 12.0,
+        "image": "/dishes/food_6.png",
+        "tags": ["Indian", "Spicy", "Chicken"],
+        "featured": false
+      },
+      {
+        "id": 1003,
+        "name": "Spicy Chicken Frankie",
+        "description": "Street-style wrap with egg layer, shredded chicken, and chili sauce.",
+        "price": 8.5,
+        "image": "/dishes/food_7.png",
+        "tags": ["Indian", "Spicy", "Chicken"],
+        "featured": false
+      },
+      {
+        "id": 803,
+        "name": "Low-Carb Club BLT",
+        "description": "Bacon, lettuce, and tomato sandwich on keto-friendly bread.",
+        "price": 12.0,
+        "image": "/dishes/food_14.png",
+        "tags": ["Low-Carb", "Sandwich", "Bacon"],
+        "featured": false
+      },
+      {
+        "id": 802,
+        "name": "Garden Chickpea Smash",
+        "description": "Smashed chickpea salad with cucumber and red onion on seeded bread.",
+        "price": 11.5,
+        "image": "/dishes/food_15.png",
+        "tags": ["Vegetarian", "Healthy", "Sandwich"],
+        "featured": false
+      }
+    ]
+  },
+
+  {
+    "menu": "Desserts",
+    "items": [
+      {
+        "id": 302,
+        "name": "Deconstructed Meringue",
+        "description": "Crisp meringue shards served with fruit gel and sorbet.",
+        "price": 11.0,
+        "image": "/dishes/food_10.png",
+        "tags": ["Sweet", "Fruity", "Gourmet"],
+        "featured": false
+      },
+      {
+        "id": 301,
+        "name": "Mango Passion Cheesecake",
+        "description": "Creamy cheesecake topped with a tropical mango glaze.",
+        "price": 9.0,
+        "image": "/dishes/food_20.png",
+        "tags": ["Cheesecake", "Tropical", "Sweet"],
+        "featured": true
+      },
+      {
+        "id": 601,
+        "name": "Strawberry Jelly Cheesecake",
+        "description": "New York style cheesecake with a strawberry gelatin layer.",
+        "price": 8.5,
+        "image": "/dishes/food_18.png",
+        "tags": ["Cheesecake", "Berry", "Sweet"],
+        "featured": false
+      },
+      {
+        "id": 903,
+        "name": "The Sprinkle Bowl",
+        "description": "Vanilla ice cream served in an edible white chocolate and sprinkle bowl.",
+        "price": 7.5,
+        "image": "/dishes/food_12.png",
+        "tags": ["Ice Cream", "Sweet", "Fun"],
+        "featured": false
+      },
+      {
+        "id": 602,
+        "name": "Italian Panna Cotta",
+        "description": "Vanilla bean custard jars topped with macerated strawberries.",
+        "price": 7.0,
+        "image": "/dishes/food_11.png",
+        "tags": ["Italian", "Creamy", "Berry"],
+        "featured": false
+      },
+      {
+        "id": 901,
+        "name": "White Berry Layer Cake",
+        "description": "Frosted white cake topped with fresh blackberries and blueberries.",
+        "price": 6.5,
+        "image": "/dishes/food_19.png",
+        "tags": ["Cake", "Berry", "Sweet"],
+        "featured": false
+      },
+      {
+        "id": 1103,
+        "name": "Raspberry Gelato Cup",
+        "description": "Creamy raspberry gelato served with fresh berries.",
+        "price": 5.0,
+        "image": "/dishes/food_9.png",
+        "tags": ["Gelato", "Berry", "Sweet"],
+        "featured": false
+      },
+      {
+        "id": 902,
+        "name": "Celebration Cupcake",
+        "description": "Vanilla sponge with pink buttercream and a cherry on top.",
+        "price": 4.0,
+        "image": "/dishes/food_17.png",
+        "tags": ["Cupcake", "Sweet", "Best Seller"],
+        "featured": false
+      }
+    ]
+  }
+]

@@ -3,7 +3,7 @@
     "id": 991,
     "name": "Seafood Marinara",
     "description": "Our signature dish: Spaghetti tossed in a rich white wine and tomato sauce, topped with fresh prawns and calamari.",
-    "price": 24.5,
+    "price": 24,
     "image": "/dishes/food_31.png",
     "tags": ["Chef's Choice", "Seafood"]
   },
@@ -11,7 +11,7 @@
     "id": 992,
     "name": "The Saigon Banh Mi",
     "description": "A customer favorite featuring a crispy baguette filled with savory pork, pickled daikon & carrots, cucumber, and fresh cilantro.",
-    "price": 10.5,
+    "price": 9.5,
     "image": "/dishes/food_16.png",
     "tags": ["Best Seller", "Lunch"]
   },
@@ -19,7 +19,7 @@
     "id": 994,
     "name": "Wild Mushroom & Chicken Alfredo",
     "description": "Fettuccine pasta tossed in a luxurious parmesan cream sauce with grilled chicken breast and earthy sliced mushrooms.",
-    "price": 19.5,
+    "price": 17.5,
     "image": "/dishes/food_27.png",
     "tags": ["Comfort Food", "Creamy"]
   },
@@ -27,7 +27,7 @@
     "id": 993,
     "name": "Mango Passion Cheesecake",
     "description": "A stunning dessert finale: Creamy mousse cheesecake topped with a vibrant mango-passion fruit glaze and edible flowers.",
-    "price": 9.5,
+    "price": 9,
     "image": "/dishes/food_20.png",
     "tags": ["Top Rated", "Gluten-Free"]
   }
