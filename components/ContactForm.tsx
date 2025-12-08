@@ -11,7 +11,6 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { toast } from "sonner";
-import { motion } from "framer-motion";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -56,72 +55,16 @@ const ContactForm = () => {
     }, 1500);
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, x: -30 } as const,
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
-    } as const,
-  };
-
-  const formVariants = {
-    hidden: { opacity: 0, x: 30 } as const,
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    } as const,
-  };
-
-  const inputVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
-
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 mb-12 sm:mb-14 lg:mb-16">
       {/* Contact Info Cards - Left Column */}
-      <motion.div
-        className="lg:col-span-1 space-y-4 sm:space-y-6 lg:space-y-8"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-      >
+      <div className="lg:col-span-1 space-y-4 sm:space-y-6 lg:space-y-8">
         {/* Location Card */}
-        <motion.div
-          className="bg-white p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl border border-gray-200 hover:border-[#e05d44]/50 transition-all duration-300 shadow-sm hover:shadow-md active:scale-[0.98] sm:hover:scale-105"
-          variants={cardVariants}
-          whileHover={{ y: -5 }}
-        >
+        <div className="bg-white p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl border border-gray-200 hover:border-[#e05d44]/50 transition-all duration-300 shadow-sm hover:shadow-md active:scale-[0.98] sm:hover:scale-105">
           <div className="flex items-start gap-3 sm:gap-4">
-            <motion.div
-              className="p-2.5 sm:p-3 bg-[#e05d44]/10 rounded-lg shrink-0"
-              whileHover={{ rotate: 360 }}
-              transition={{ duration: 0.6 }}
-            >
+            <div className="p-2.5 sm:p-3 bg-[#e05d44]/10 rounded-lg shrink-0">
               <FaMapMarkerAlt className="text-[#e05d44] text-lg sm:text-xl" />
-            </motion.div>
+            </div>
             <div>
               <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">
                 Location
@@ -133,22 +76,14 @@ const ContactForm = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Phone Card */}
-        <motion.div
-          className="bg-white p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl border border-gray-200 hover:border-[#e05d44]/50 transition-all duration-300 shadow-sm hover:shadow-md active:scale-[0.98] sm:hover:scale-105"
-          variants={cardVariants}
-          whileHover={{ y: -5 }}
-        >
+        <div className="bg-white p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl border border-gray-200 hover:border-[#e05d44]/50 transition-all duration-300 shadow-sm hover:shadow-md active:scale-[0.98] sm:hover:scale-105">
           <div className="flex items-start gap-3 sm:gap-4">
-            <motion.div
-              className="p-2.5 sm:p-3 bg-[#e05d44]/10 rounded-lg shrink-0"
-              whileHover={{ rotate: [0, -10, 10, -10, 0] }}
-              transition={{ duration: 0.5 }}
-            >
+            <div className="p-2.5 sm:p-3 bg-[#e05d44]/10 rounded-lg shrink-0">
               <FaPhone className="text-[#e05d44] text-lg sm:text-xl" />
-            </motion.div>
+            </div>
             <div>
               <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">
                 Phone
@@ -161,22 +96,14 @@ const ContactForm = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Email Card */}
-        <motion.div
-          className="bg-white p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl border border-gray-200 hover:border-[#e05d44]/50 transition-all duration-300 shadow-sm hover:shadow-md active:scale-[0.98] sm:hover:scale-105"
-          variants={cardVariants}
-          whileHover={{ y: -5 }}
-        >
+        <div className="bg-white p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl border border-gray-200 hover:border-[#e05d44]/50 transition-all duration-300 shadow-sm hover:shadow-md active:scale-[0.98] sm:hover:scale-105">
           <div className="flex items-start gap-3 sm:gap-4">
-            <motion.div
-              className="p-2.5 sm:p-3 bg-[#e05d44]/10 rounded-lg shrink-0"
-              whileHover={{ scale: 1.2 }}
-              transition={{ duration: 0.3 }}
-            >
+            <div className="p-2.5 sm:p-3 bg-[#e05d44]/10 rounded-lg shrink-0">
               <FaEnvelope className="text-[#e05d44] text-lg sm:text-xl" />
-            </motion.div>
+            </div>
             <div>
               <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">
                 Email
@@ -189,22 +116,14 @@ const ContactForm = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Hours Card */}
-        <motion.div
-          className="bg-white p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl border border-gray-200 hover:border-[#e05d44]/50 transition-all duration-300 shadow-sm hover:shadow-md active:scale-[0.98] sm:hover:scale-105"
-          variants={cardVariants}
-          whileHover={{ y: -5 }}
-        >
+        <div className="bg-white p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl border border-gray-200 hover:border-[#e05d44]/50 transition-all duration-300 shadow-sm hover:shadow-md active:scale-[0.98] sm:hover:scale-105">
           <div className="flex items-start gap-3 sm:gap-4">
-            <motion.div
-              className="p-2.5 sm:p-3 bg-[#e05d44]/10 rounded-lg shrink-0"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            >
+            <div className="p-2.5 sm:p-3 bg-[#e05d44]/10 rounded-lg shrink-0">
               <FaClock className="text-[#e05d44] text-lg sm:text-xl" />
-            </motion.div>
+            </div>
             <div>
               <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">
                 Opening Hours
@@ -216,83 +135,50 @@ const ContactForm = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Social Media Card */}
-        <motion.div
-          className="bg-white p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl border border-gray-200 shadow-sm"
-          variants={cardVariants}
-        >
+        <div className="bg-white p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl border border-gray-200 shadow-sm">
           <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3 sm:mb-4">
             Follow Us
           </h3>
           <div className="flex gap-3 sm:gap-4">
-            <motion.a
+            <a
               href="#"
               aria-label="Instagram"
               className="p-2.5 sm:p-3 bg-gray-100 rounded-lg hover:bg-[#e05d44] transition-all duration-300 group touch-manipulation"
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              whileTap={{ scale: 0.9 }}
             >
               <FaInstagram className="text-gray-700 group-hover:text-white text-lg sm:text-xl transition-colors" />
-            </motion.a>
-            <motion.a
+            </a>
+            <a
               href="#"
               aria-label="Facebook"
               className="p-2.5 sm:p-3 bg-gray-100 rounded-lg hover:bg-[#e05d44] transition-all duration-300 group touch-manipulation"
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              whileTap={{ scale: 0.9 }}
             >
               <FaFacebook className="text-gray-700 group-hover:text-white text-lg sm:text-xl transition-colors" />
-            </motion.a>
-            <motion.a
+            </a>
+            <a
               href="#"
               aria-label="Twitter"
               className="p-2.5 sm:p-3 bg-gray-100 rounded-lg hover:bg-[#e05d44] transition-all duration-300 group touch-manipulation"
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              whileTap={{ scale: 0.9 }}
             >
               <FaTwitter className="text-gray-700 group-hover:text-white text-lg sm:text-xl transition-colors" />
-            </motion.a>
+            </a>
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       {/* Contact Form - Right Column */}
-      <motion.div
-        className="lg:col-span-2"
-        variants={formVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-      >
+      <div className="lg:col-span-2">
         <div className="bg-white p-5 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl border border-gray-200 shadow-sm">
-          <motion.h2
-            className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
             Send us a Message
-          </motion.h2>
+          </h2>
 
           <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             {/* Name and Email Row */}
-            <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={{
-                visible: {
-                  transition: {
-                    staggerChildren: 0.1,
-                  },
-                },
-              }}
-            >
-              <motion.div variants={inputVariants}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
                 <label className="block text-gray-700 font-medium mb-1.5 sm:mb-2 text-sm sm:text-base">
                   Name *
                 </label>
@@ -305,8 +191,8 @@ const ContactForm = () => {
                   className="w-full bg-white border border-gray-300 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-gray-900 text-sm sm:text-base focus:outline-none focus:border-[#e05d44] focus:ring-2 focus:ring-[#e05d44]/20 transition-all"
                   placeholder="John Doe"
                 />
-              </motion.div>
-              <motion.div variants={inputVariants}>
+              </div>
+              <div>
                 <label className="block text-gray-700 font-medium mb-1.5 sm:mb-2 text-sm sm:text-base">
                   Email *
                 </label>
@@ -319,17 +205,11 @@ const ContactForm = () => {
                   className="w-full bg-white border border-gray-300 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-gray-900 text-sm sm:text-base focus:outline-none focus:border-[#e05d44] focus:ring-2 focus:ring-[#e05d44]/20 transition-all"
                   placeholder="john@example.com"
                 />
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
             {/* Phone Field */}
-            <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <label className="block text-gray-700 font-medium mb-1.5 sm:mb-2 text-sm sm:text-base">
                   Phone
@@ -343,15 +223,10 @@ const ContactForm = () => {
                   placeholder="+234 123 456 7890"
                 />
               </div>
-            </motion.div>
+            </div>
 
             {/* Message Field */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
+            <div>
               <label className="block text-gray-700 font-medium mb-1.5 sm:mb-2 text-sm sm:text-base">
                 Message
               </label>
@@ -363,25 +238,19 @@ const ContactForm = () => {
                 className="w-full bg-white border border-gray-300 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-gray-900 text-sm sm:text-base focus:outline-none focus:border-[#e05d44] focus:ring-2 focus:ring-[#e05d44]/20 transition-all resize-none"
                 placeholder="Tell us about your reservation or inquiry..."
               ></textarea>
-            </motion.div>
+            </div>
 
             {/* Submit Button */}
-            <motion.button
+            <button
               type="submit"
               disabled={isSubmitting}
               className="w-full bg-[#e05d44] hover:bg-[#c94d34] active:scale-[0.98] sm:hover:scale-105 duration-300 py-3 sm:py-4 rounded-lg text-white font-bold text-base sm:text-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg hover:shadow-xl transition-all touch-manipulation"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
             >
               {isSubmitting ? "Sending..." : "Send Message"}
-            </motion.button>
+            </button>
           </form>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

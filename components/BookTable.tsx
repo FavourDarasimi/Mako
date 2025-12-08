@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import { FaTimes, FaCalendarAlt, FaClock, FaUser } from "react-icons/fa";
 import { toast } from "sonner";
-import { motion, AnimatePresence } from "framer-motion";
 
 interface BookTableModalProps {
   isOpen: boolean;
@@ -82,143 +81,43 @@ export default function BookTableModal({
     }
   };
 
-  const backdropVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
-
-  const modalVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.8,
-      y: 50,
-    } as const,
-    visible: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        duration: 0.5,
-        bounce: 0.3,
-      },
-    } as const,
-    exit: {
-      opacity: 0,
-      scale: 0.8,
-      y: 50,
-      transition: {
-        duration: 0.3,
-      },
-    } as const,
-  };
-
-  const headerVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.2,
-        duration: 0.4,
-      },
-    },
-  };
-
-  const formSectionVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.4,
-      },
-    },
-  };
-
-  const inputVariants = {
-    hidden: { opacity: 0, y: 10 },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
-
   return (
-    <AnimatePresence>
+    <div>
       {isOpen && (
-        <motion.div
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-3 sm:p-4 md:p-6"
           onClick={handleBackdropClick}
-          variants={backdropVariants}
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
         >
-          <motion.div
-            className="bg-white rounded-xl sm:rounded-2xl shadow-2xl max-w-2xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto scroll-smooth scrollbar-hide relative"
-            variants={modalVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
+          <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl max-w-2xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto scroll-smooth scrollbar-hide relative">
             {/* Close Button */}
-            <motion.button
+            <button
               onClick={onClose}
               className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 hover:bg-gray-100 rounded-full transition-colors z-10 touch-manipulation"
-              aria-label="Close modal"
-              whileHover={{ scale: 1.1, rotate: 90 }}
-              whileTap={{ scale: 0.9 }}
-              initial={{ opacity: 0, rotate: -90 }}
-              animate={{ opacity: 1, rotate: 0 }}
-              transition={{ delay: 0.3 }}
             >
               <FaTimes className="text-white hover:text-gray-600 text-lg sm:text-xl" />
-            </motion.button>
+            </button>
 
             {/* Header */}
-            <motion.div
-              className="bg-linear-to-r from-[#e05d44] to-[#c94d34] text-white p-4 sm:p-5 md:p-6 rounded-t-xl sm:rounded-t-2xl"
-              variants={headerVariants}
-              initial="hidden"
-              animate="visible"
-            >
+            <div className="bg-linear-to-r from-[#e05d44] to-[#c94d34] text-white p-4 sm:p-5 md:p-6 rounded-t-xl sm:rounded-t-2xl">
               <h2 className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2 pr-8">
                 Book a Table
               </h2>
               <p className="text-white/90 text-sm sm:text-base">
                 Reserve your spot at Mako - where great food meets great company
               </p>
-            </motion.div>
+            </div>
 
             {/* Form Content */}
             <div className="p-4 sm:p-6 md:p-8">
               <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
                 {/* Personal Information Section */}
-                <motion.div
-                  variants={formSectionVariants}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ delay: 0.3 }}
-                >
+                <div>
                   <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-2">
                     <FaUser className="text-[#e05d44] text-sm sm:text-base" />
                     Your Information
                   </h3>
-                  <motion.div
-                    className="space-y-3 sm:space-y-4"
-                    initial="hidden"
-                    animate="visible"
-                    variants={{
-                      visible: {
-                        transition: {
-                          staggerChildren: 0.1,
-                          delayChildren: 0.4,
-                        },
-                      },
-                    }}
-                  >
-                    <motion.div variants={inputVariants}>
+                  <div className="space-y-3 sm:space-y-4">
+                    <div>
                       <label className="block text-gray-700 font-medium mb-1.5 sm:mb-2 text-sm sm:text-base">
                         Full Name *
                       </label>
@@ -231,12 +130,9 @@ export default function BookTableModal({
                         className="w-full bg-white border border-gray-300 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-gray-900 text-sm sm:text-base focus:outline-none focus:border-[#e05d44] focus:ring-2 focus:ring-[#e05d44]/20 transition-all"
                         placeholder="John Doe"
                       />
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                      className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4"
-                      variants={inputVariants}
-                    >
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                       <div>
                         <label className="block text-gray-700 font-medium mb-1.5 sm:mb-2 text-sm sm:text-base">
                           Email *
@@ -265,35 +161,18 @@ export default function BookTableModal({
                           placeholder="+234 123 456 7890"
                         />
                       </div>
-                    </motion.div>
-                  </motion.div>
-                </motion.div>
+                    </div>
+                  </div>
+                </div>
 
                 {/* Reservation Details Section */}
-                <motion.div
-                  variants={formSectionVariants}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ delay: 0.5 }}
-                >
+                <div>
                   <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-2">
                     <FaCalendarAlt className="text-[#e05d44] text-sm sm:text-base" />
                     Reservation Details
                   </h3>
-                  <motion.div
-                    className="space-y-3 sm:space-y-4"
-                    initial="hidden"
-                    animate="visible"
-                    variants={{
-                      visible: {
-                        transition: {
-                          staggerChildren: 0.1,
-                          delayChildren: 0.6,
-                        },
-                      },
-                    }}
-                  >
-                    <motion.div variants={inputVariants}>
+                  <div className="space-y-3 sm:space-y-4">
+                    <div>
                       <label className="block text-gray-700 font-medium mb-1.5 sm:mb-2 text-sm sm:text-base">
                         Number of Guests *
                       </label>
@@ -310,12 +189,9 @@ export default function BookTableModal({
                           </option>
                         ))}
                       </select>
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                      className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4"
-                      variants={inputVariants}
-                    >
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                       <div>
                         <label className="block text-gray-700 font-medium mb-1.5 sm:mb-2 text-sm sm:text-base">
                           Date *
@@ -362,9 +238,9 @@ export default function BookTableModal({
                           <option value="21:00">9:00 PM</option>
                         </select>
                       </div>
-                    </motion.div>
+                    </div>
 
-                    <motion.div variants={inputVariants}>
+                    <div>
                       <label className="block text-gray-700 font-medium mb-1.5 sm:mb-2 text-sm sm:text-base">
                         Special Requests (Optional)
                       </label>
@@ -376,43 +252,32 @@ export default function BookTableModal({
                         className="w-full bg-white border border-gray-300 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-gray-900 text-sm sm:text-base focus:outline-none focus:border-[#e05d44] focus:ring-2 focus:ring-[#e05d44]/20 transition-all resize-none"
                         placeholder="Dietary restrictions, special occasions, seating preferences..."
                       ></textarea>
-                    </motion.div>
-                  </motion.div>
-                </motion.div>
+                    </div>
+                  </div>
+                </div>
 
                 {/* Submit Button */}
-                <motion.button
+                <button
                   type="submit"
-                  disabled={isSubmitting || isSuccess}
                   className="w-full bg-[#e05d44] hover:bg-[#c94d34] duration-300 py-3 sm:py-4 rounded-lg text-white font-bold text-base sm:text-lg disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transition-all touch-manipulation"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8 }}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
                 >
                   {isSubmitting
                     ? "Confirming Reservation..."
                     : isSuccess
                     ? "✓ Confirmed!"
                     : "Confirm Reservation"}
-                </motion.button>
+                </button>
 
                 {/* Policy Text */}
-                <motion.p
-                  className="text-xs sm:text-sm text-gray-500 text-center leading-relaxed"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.9 }}
-                >
+                <p className="text-xs sm:text-sm text-gray-500 text-center leading-relaxed">
                   By booking, you agree to our cancellation policy: 2 hours
                   notice for changes
-                </motion.p>
+                </p>
               </form>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       )}
-    </AnimatePresence>
+    </div>
   );
 }
